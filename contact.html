@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact: Srishti Bhushan Mataji</title>
+  <link rel="icon" type="image/jpeg" href="assets/images/logo/logo.jpeg" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="assets/css/lang-switcher.css" rel="stylesheet" />
+  <link href="assets/css/sanstha-menu.css" rel="stylesheet" />
+  <script>document.documentElement.lang=localStorage.getItem('site-lang')||'en';</script>
+
+  <style>
+    :root {
+      --orange: #f7941d;
+      --dark:   #1e1e1e;
+      --navy:   #1a2a4a;
+      --gray-bg:#f5f5f5;
+      --text:   #555;
+    }
+
+    * { box-sizing: border-box; }
+    body { font-family: 'Roboto', 'Noto Sans Devanagari', sans-serif; font-optical-sizing: auto; font-variation-settings: "wdth" 100; color: var(--text); overflow-x: hidden; }
+    a    { text-decoration: none; }
+    h1,h2,h3,h4,h5 { color: var(--dark); }
+
+    /* ── Navbar ── */
+    .navbar {
+      background: #fff;
+      box-shadow: 0 2px 10px rgba(0,0,0,.08);
+      padding: 0;
+    }
+    .navbar-brand img { width: 140px; height: auto; object-fit: contain; }
+    .navbar-nav .nav-link {
+      font-size: .85rem; font-weight: 700; color: var(--navy);
+      padding: 28px 22px; letter-spacing: 1.5px;
+      text-transform: uppercase; transition: color .2s;
+    }
+    .navbar-nav .nav-link:hover,
+    .navbar-nav .nav-link.active { color: var(--orange); }
+    .navbar-nav .dropdown-toggle::after { vertical-align: middle; margin-left: 4px; }
+    .dropdown-menu {
+      border: none; border-top: 3px solid var(--orange);
+      border-radius: 0 0 4px 4px;
+      box-shadow: 0 8px 24px rgba(0,0,0,.1);
+      min-width: 180px; padding: 8px 0;
+    }
+    .dropdown-item {
+      font-size: .78rem; font-weight: 600;
+      letter-spacing: .8px; text-transform: uppercase;
+      color: var(--navy); padding: 9px 20px;
+      transition: color .2s, background .2s;
+    }
+    .dropdown-item:hover { color: var(--orange); background: #fdf6ee; }
+
+    /* ── Page Hero ── */
+    .page-hero {
+      background: linear-gradient(135deg, var(--navy) 0%, #2c3e6e 100%);
+      padding: 70px 0 55px;
+      text-align: center;
+    }
+    .page-hero h1 { color: #fff; font-size: 2.4rem; font-weight: 800; margin-bottom: 8px; }
+    .page-hero p  { color: rgba(255,255,255,.65); font-size: .9rem; margin: 0; }
+    .breadcrumb   { background: transparent; justify-content: center; margin-bottom: 12px; }
+    .breadcrumb-item a { color: var(--orange); }
+    .breadcrumb-item.active { color: rgba(255,255,255,.55); }
+    .breadcrumb-item + .breadcrumb-item::before { color: rgba(255,255,255,.35); }
+
+    /* ── Info Cards ── */
+    .contact-section { padding: 80px 0; background: var(--gray-bg); }
+
+    .info-card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 36px 24px;
+      text-align: center;
+      box-shadow: 0 2px 16px rgba(0,0,0,.07);
+      transition: transform .3s ease, box-shadow .3s ease;
+      height: 100%;
+    }
+    .info-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 32px rgba(247,148,29,.18);
+    }
+    .info-card .icon-circle {
+      width: 68px; height: 68px;
+      background: #fff3e0;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 18px;
+      font-size: 1.6rem;
+      color: var(--orange);
+      transition: background .3s, color .3s;
+    }
+    .info-card:hover .icon-circle { background: var(--orange); color: #fff; }
+    .info-card h5 { font-size: .95rem; font-weight: 700; margin-bottom: 8px; }
+    .info-card p  { font-size: .82rem; line-height: 1.7; margin: 0; }
+    .info-card a  { color: var(--text); transition: color .2s; }
+    .info-card a:hover { color: var(--orange); }
+
+    /* ── Form Section ── */
+    .form-section { padding: 80px 0; background: #fff; }
+
+    .form-section .section-label {
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 8px;
+    }
+    .form-section h2 {
+      font-size: 2rem; font-weight: 800;
+      margin-bottom: 10px;
+    }
+    .form-section .sub {
+      font-size: .88rem; line-height: 1.7;
+      margin-bottom: 36px;
+    }
+
+    .form-control, .form-select {
+      border: 1px solid #e0e0e0;
+      border-radius: 6px;
+      padding: 12px 16px;
+      font-size: .85rem;
+      font-family: 'Roboto', 'Noto Sans Devanagari', sans-serif;
+      color: var(--dark);
+      transition: border-color .2s, box-shadow .2s;
+    }
+    .form-control:focus, .form-select:focus {
+      border-color: var(--orange);
+      box-shadow: 0 0 0 3px rgba(247,148,29,.15);
+      outline: none;
+    }
+    .form-control::placeholder { color: #bbb; }
+    .form-label {
+      font-size: .78rem; font-weight: 600;
+      letter-spacing: .5px; text-transform: uppercase;
+      color: var(--navy); margin-bottom: 6px;
+    }
+
+    .btn-submit {
+      background: var(--orange);
+      color: #fff; border: none;
+      border-radius: 6px;
+      padding: 13px 40px;
+      font-size: .85rem; font-weight: 700;
+      letter-spacing: .8px;
+      transition: background .25s, transform .2s;
+      width: 100%;
+    }
+    .btn-submit:hover { background: #e0840f; transform: translateY(-2px); color: #fff; }
+
+    /* success message */
+    .success-msg {
+      display: none;
+      background: #e8f8f0;
+      border: 1px solid #a3d9b8;
+      border-radius: 6px;
+      padding: 14px 20px;
+      font-size: .85rem;
+      color: #1e7e4a;
+      margin-top: 18px;
+    }
+
+    /* ── Map Section ── */
+    .map-section { padding: 0; line-height: 0; }
+    .map-section iframe {
+      width: 100%; height: 420px; border: none; display: block;
+      filter: grayscale(20%);
+    }
+
+    /* ── Social Strip ── */
+    .social-strip {
+      background: var(--navy);
+      padding: 30px 0;
+      text-align: center;
+    }
+    .social-strip p {
+      color: rgba(255,255,255,.7);
+      font-size: .85rem; margin-bottom: 16px;
+    }
+    .social-strip .s-btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 42px; height: 42px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.1);
+      color: #fff; font-size: 1.1rem;
+      margin: 0 6px;
+      transition: background .25s, transform .25s;
+    }
+    .social-strip .s-btn:hover { background: var(--orange); transform: translateY(-3px); }
+
+    /* ── Footer ── */
+    .footer {
+      background: #1e1e1e;
+      color: rgba(255,255,255,.7);
+      padding: 64px 0 32px;
+    }
+    .footer h5 {
+      color: #fff; font-size: .95rem; font-weight: 700;
+      margin-bottom: 22px; position: relative; padding-bottom: 10px;
+    }
+    .footer h5::after {
+      content: ''; position: absolute; left: 0; bottom: 0;
+      width: 32px; height: 2px; background: var(--orange);
+    }
+    .footer p, .footer li { font-size: .82rem; line-height: 1.9; }
+    .footer ul { list-style: none; padding: 0; margin: 0; }
+    .footer ul li a { color: rgba(255,255,255,.65); font-size: .82rem; transition: color .2s; }
+    .footer ul li a:hover { color: var(--orange); }
+    .footer .contact-item { display: flex; gap: 10px; align-items: flex-start; margin-bottom: 10px; }
+    .footer .contact-item i { color: var(--orange); margin-top: 3px; flex-shrink: 0; }
+    .newsletter-form { display: flex; margin-top: 14px; }
+    .newsletter-form input {
+      flex: 1; padding: 10px 14px; border: none;
+      border-radius: 3px 0 0 3px; font-size: .82rem; outline: none;
+    }
+    .newsletter-form button {
+      background: var(--orange); color: #fff; border: none;
+      padding: 10px 16px; border-radius: 0 3px 3px 0;
+      cursor: pointer; transition: background .2s;
+    }
+    .newsletter-form button:hover { background: #e0840f; }
+    .footer-disclaimer {
+      border-top: 1px solid rgba(255,255,255,.1);
+      margin-top: 40px; padding-top: 20px;
+      text-align: center;
+    }
+    .footer-disclaimer p {
+      margin: 0 auto;
+      font-size: .82rem; line-height: 1.8;
+      color: rgba(255,255,255,.75);
+      max-width: 900px;
+    }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,.1);
+      margin-top: 20px; padding-top: 20px;
+      display: flex; align-items: center;
+      justify-content: space-between; flex-wrap: wrap; gap: 12px;
+    }
+    .footer-bottom p { margin: 0; font-size: .78rem; }
+    .footer-logo { display: flex; align-items: center; gap: 8px; color: #fff; font-weight: 700; }
+    .footer-logo img { width: 100px; height: auto; object-fit: contain; mix-blend-mode: lighten; }
+
+    /* ── Animations ── */
+    .anim-fade-up {
+      opacity: 0; transform: translateY(40px);
+      transition: opacity .6s ease, transform .6s ease;
+    }
+    .anim-fade-left {
+      opacity: 0; transform: translateX(-45px);
+      transition: opacity .65s ease, transform .65s ease;
+    }
+    .anim-fade-right {
+      opacity: 0; transform: translateX(45px);
+      transition: opacity .65s ease, transform .65s ease;
+    }
+    .anim-fade-up.animate-in,
+    .anim-fade-left.animate-in,
+    .anim-fade-right.animate-in { opacity: 1; transform: none; }
+    [data-delay="1"] { transition-delay: .15s !important; }
+    [data-delay="2"] { transition-delay: .30s !important; }
+  </style>
+</head>
+<body data-i18n-title="title.contact">
+
+
+<!-- ══════════════════════ NAVBAR ══════════════════════ -->
+<nav class="navbar navbar-expand-lg sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <img src="assets/images/logo/logo.jpeg" alt="Logo" />
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="index.html" data-i18n="nav.home">Home</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" data-i18n="nav.explore">Explore</a>
+          <ul class="dropdown-menu">
+            <li hidden><a class="dropdown-item" href="#" data-i18n="nav.sangh">Sangh</a></li>
+            <li><a class="dropdown-item" href="chaturmas.html" data-i18n="nav.chaturmas">Chaturmas</a></li>
+            <li hidden><a class="dropdown-item" href="#" data-i18n="nav.granth">Granth</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="about.html" data-i18n="nav.biography">Biography</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false" data-i18n="nav.sanstha">Sanstha</a>
+          <ul class="dropdown-menu sanstha-menu">
+            <li><a class="dropdown-item" href="sristhi-mangalam-foundation.html" data-i18n="svc.madhuban.title">Sristhi Mangalam Foundation, Shikhar Ji Madhuban</a></li>
+            <li><a class="dropdown-item" href="sristhi-mangalam-seva-samiti.html" data-i18n="svc.seva.title">Sristhi Mangalam Seva Samiti (Reg.)</a></li>
+            <li><a class="dropdown-item" href="adinath-sristhi-dharma-prabhavana-samiti.html" data-i18n="svc.adinath.title">Shri Adinath Sristhi Dharma Prabhavana Samiti, Sammed Shikhar Ji</a></li>
+            <li><a class="dropdown-item" href="sristhi-mangalam-samiti-mahavir-ji.html" data-i18n="svc.mahavir.title">Sristhi Mangalam Samiti, Shri Mahavir Ji</a></li>
+            <li><a class="dropdown-item" href="aadi-sristhi-cancer-trust.html" data-i18n="svc.cancer.title">Aadi Sristhi Cancer Trust</a></li>
+            <li><a class="dropdown-item" href="nijashray.html" data-i18n="svc.nijashray.title">Nijashray</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" data-i18n="nav.pravachan">Pravachan</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="pravachan.html?tab=video" data-i18n="nav.video">Video</a></li>
+            <li><a class="dropdown-item" href="pravachan.html?tab=shorts" data-i18n="nav.shorts">Shorts</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="events.html" data-i18n="nav.events">Events</a></li>
+        <li class="nav-item"><a class="nav-link active" href="contact.html" data-i18n="nav.contact">Contact Us</a></li>
+        <li class="nav-item lang-switcher">
+          <div class="lang-select-wrap">
+            <i class="bi bi-globe2" aria-hidden="true"></i>
+            <select id="langSelect" class="lang-select" aria-label="Select language">
+              <option value="en">English</option>
+              <option value="hi">हिंदी</option>
+            </select>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ══════════════════════ PAGE HERO ══════════════════════ -->
+<section class="page-hero">
+  <div class="container">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html" data-i18n="nav.home">Home</a></li>
+        <li class="breadcrumb-item active" data-i18n="breadcrumb.contact">Contact Us</li>
+      </ol>
+    </nav>
+    <h1 data-i18n="nav.contact">Contact Us</h1>
+    <p data-i18n="contact.heroSub">We'd love to hear from you — reach out anytime</p>
+  </div>
+</section>
+
+<!-- ══════════════════════ INFO CARDS ══════════════════════ -->
+<section class="contact-section">
+  <div class="container">
+    <div class="row g-4">
+
+      <div class="col-md-4">
+        <div class="info-card anim-fade-up">
+          <div class="icon-circle"><i class="bi bi-geo-alt-fill"></i></div>
+          <h5 data-i18n="contact.address">Our Address</h5>
+          <p data-i18n="site.address"></p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="info-card anim-fade-up" data-delay="1">
+          <div class="icon-circle"><i class="bi bi-telephone-fill"></i></div>
+          <h5 data-i18n="contact.phone">Phone Number</h5>
+          <p>
+            <a data-config-tel="phone" data-config-text="phone"></a><br />
+            <!-- <a href="tel:+15559876543">+1 (555) 987-6543</a> -->
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="info-card anim-fade-up" data-delay="2">
+          <div class="icon-circle"><i class="bi bi-envelope-fill"></i></div>
+          <h5 data-i18n="contact.email">Email Address</h5>
+          <p>
+            <a data-config-mailto="email" data-config-text="email"></a><br />
+            <a data-config-mailto="supportEmail" data-config-text="supportEmail"></a>
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════ FORM + HOURS ══════════════════════ -->
+<section class="form-section">
+  <div class="container">
+    <div class="row g-5 align-items-start">
+
+      <!-- Contact Form -->
+      <div class="col-lg-7 anim-fade-left">
+        <p class="section-label" data-i18n="contact.sendLabel">Send a Message</p>
+        <h2 data-i18n="contact.formTitle">Get In Touch With Us</h2>
+        <p class="sub" data-i18n="contact.formSub">Have a question, suggestion or just want to say hello? Fill in the form below and we'll get back to you as soon as possible.</p>
+
+        <form id="contactForm" novalidate>
+          <div class="row g-3">
+
+            <div class="col-sm-6">
+              <label class="form-label" data-i18n="contact.firstName">First Name</label>
+              <input type="text" class="form-control" data-i18n-placeholder="contact.ph.firstName" placeholder="Your first name" required />
+            </div>
+            <div class="col-sm-6">
+              <label class="form-label" data-i18n="contact.lastName">Last Name</label>
+              <input type="text" class="form-control" data-i18n-placeholder="contact.ph.lastName" placeholder="Your last name" required />
+            </div>
+
+            <div class="col-sm-6">
+              <label class="form-label" data-i18n="contact.emailLabel">Email Address</label>
+              <input type="email" class="form-control" data-i18n-placeholder="contact.ph.email" placeholder="you@example.com" required />
+            </div>
+            <div class="col-sm-6">
+              <label class="form-label" data-i18n="contact.phoneLabel">Phone Number</label>
+              <input type="tel" class="form-control" data-i18n-placeholder="contact.ph.phone" placeholder="+1 555 000 0000" />
+            </div>
+
+            <div class="col-12">
+              <label class="form-label" data-i18n="contact.subject">Subject</label>
+              <select class="form-select">
+                <option value="" disabled selected data-i18n="contact.opt.select">Select a subject</option>
+                <option data-i18n="contact.opt.general">General Inquiry</option>
+                <option data-i18n="contact.opt.events">Events & Festivals</option>
+                <!-- <option data-i18n="contact.opt.membership">Membership</option> -->
+                <option data-i18n="contact.opt.volunteer">Volunteer</option>
+                <option data-i18n="contact.opt.donation">Donation</option>
+                <option data-i18n="contact.opt.other">Other</option>
+              </select>
+            </div>
+
+            <div class="col-12">
+              <label class="form-label" data-i18n="contact.message">Message</label>
+              <textarea class="form-control" rows="5" data-i18n-placeholder="contact.ph.message" placeholder="Write your message here…" required></textarea>
+            </div>
+
+            <div class="col-12">
+              <button type="submit" class="btn btn-submit">
+                <i class="bi bi-send-fill me-2"></i><span data-i18n="contact.btnSend">Send Message</span>
+              </button>
+            </div>
+
+          </div>
+        </form>
+
+        <div class="success-msg" id="successMsg">
+          <i class="bi bi-check-circle-fill me-2"></i>
+          <span data-i18n="contact.success">Thank you! Your message has been sent. We'll get back to you soon.</span>
+        </div>
+      </div>
+
+      <!-- Office Hours + Quick Info -->
+      <div class="col-lg-5 anim-fade-right">
+        <p class="section-label" data-i18n="contact.hoursLabel">Office Hours</p>
+        <h2 data-i18n="contact.hoursTitle">When to Reach Us</h2>
+        <p class="sub" data-i18n="contact.hoursSub">Our team is available during the following hours. Feel free to visit us or call during these times.</p>
+
+        <ul class="list-unstyled mb-4">
+          <li class="d-flex justify-content-between py-3 border-bottom">
+            <span style="font-weight:600; font-size:.85rem; color:var(--navy)" data-i18n="contact.day.monFri">Monday – Friday</span>
+            <span style="font-size:.85rem; color:var(--orange); font-weight:700">9:00 AM – 6:00 PM</span>
+          </li>
+          <li class="d-flex justify-content-between py-3 border-bottom">
+            <span style="font-weight:600; font-size:.85rem; color:var(--navy)" data-i18n="contact.day.sat">Saturday</span>
+            <span style="font-size:.85rem; color:var(--orange); font-weight:700">10:00 AM – 4:00 PM</span>
+          </li>
+          <li class="d-flex justify-content-between py-3 border-bottom">
+            <span style="font-weight:600; font-size:.85rem; color:var(--navy)" data-i18n="contact.day.sun">Sunday</span>
+            <span style="font-size:.85rem; color:#aaa; font-weight:600" data-i18n="contact.hours.closed">Closed</span>
+          </li>
+          <li class="d-flex justify-content-between py-3">
+            <span style="font-weight:600; font-size:.85rem; color:var(--navy)" data-i18n="contact.day.festival">Festival Days</span>
+            <span style="font-size:.85rem; color:var(--orange); font-weight:700" data-i18n="contact.hours.special">Special Hours</span>
+          </li>
+        </ul>
+
+        <!-- Quick contact boxes -->
+        <div class="p-4 rounded-3 mb-3" style="background:var(--gray-bg);">
+          <div class="d-flex align-items-center gap-3">
+            <div style="width:46px;height:46px;background:var(--orange);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.2rem;flex-shrink:0;">
+              <i class="bi bi-whatsapp"></i>
+            </div>
+            <div>
+              <div style="font-size:.72rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#aaa;" data-i18n="contact.whatsapp">WhatsApp</div>
+              <a data-config-wa="whatsapp" data-config-text="whatsapp" style="font-size:.9rem;font-weight:700;color:var(--navy);"></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-4 rounded-3" style="background:var(--gray-bg);">
+          <div class="d-flex align-items-center gap-3">
+            <div style="width:46px;height:46px;background:var(--orange);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.2rem;flex-shrink:0;">
+              <i class="bi bi-envelope-fill"></i>
+            </div>
+            <div>
+              <div style="font-size:.72rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#aaa;" data-i18n="contact.emailUs">Email Us</div>
+              <a data-config-mailto="email" data-config-text="email" style="font-size:.9rem;font-weight:700;color:var(--navy);"></a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════ MAP ══════════════════════ -->
+<div class="map-section">
+  <iframe
+    data-config-src="mapEmbedUrl"
+    allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+    title="Location map">
+  </iframe>
+</div>
+
+<!-- ══════════════════════ SOCIAL STRIP ══════════════════════ -->
+<div class="social-strip">
+  <p data-i18n="contact.social">Follow us on social media</p>
+  <a href="#" class="s-btn"><i class="bi bi-facebook"></i></a>
+  <a href="https://www.instagram.com/aadi_srashti_prabhavna/" data-config-href="instagram" class="s-btn" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+  <a href="https://www.youtube.com/@Srishti_mangalam" data-config-href="youtube" class="s-btn" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+  <a href="#" class="s-btn"><i class="bi bi-twitter-x"></i></a>
+  <a href="#" class="s-btn"><i class="bi bi-whatsapp"></i></a>
+</div>
+
+<!-- ══════════════════════ FOOTER ══════════════════════ -->
+<footer class="footer">
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-lg-3 col-md-6">
+        <h5 data-i18n="footer.aboutTitle">About Us</h5>
+        <p data-i18n="footer.aboutText">Param Pujya Aryika Ratna 105 Shri Sristhi Bhushan Mataji was born in Mungaoli, a sacred town in Madhya Pradesh. The entire town was blessed by the birth of this divine soul. She filled the home of her virtuous mother Smt. Padma and ideal householder father Shri Kapoorchand with divine radiance.</p>
+      </div>
+      <div class="col-lg-2 col-md-6">
+        <h5 data-i18n="footer.quickLinks">Quick Links</h5>
+        <ul>
+          <li><a href="index.html"><i class="bi bi-chevron-right me-1" style="font-size:.7rem"></i><span data-i18n="footer.link.home">Home</span></a></li>
+          <li><a href="about.html"><i class="bi bi-chevron-right me-1" style="font-size:.7rem"></i><span data-i18n="footer.link.about">About Us</span></a></li>
+          <li><a href="sanstha.html#services"><i class="bi bi-chevron-right me-1" style="font-size:.7rem"></i><span data-i18n="footer.link.services">Services</span></a></li>
+          <li><a href="events.html"><i class="bi bi-chevron-right me-1" style="font-size:.7rem"></i><span data-i18n="footer.link.blog">Events</span></a></li>
+          <li><a href="index.html#gallery"><i class="bi bi-chevron-right me-1" style="font-size:.7rem"></i><span data-i18n="footer.link.gallery">Gallery</span></a></li>
+          <li><a href="index.html#team"><i class="bi bi-chevron-right me-1" style="font-size:.7rem"></i><span data-i18n="footer.link.team">Our Team</span></a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <h5 data-i18n="footer.contactInfo">Contact Information</h5>
+        <div class="contact-item"><i class="bi bi-geo-alt-fill"></i><span data-i18n="site.address"></span></div>
+        <div class="contact-item"><i class="bi bi-telephone-fill"></i><span data-config-text="phone"></span></div>
+        <div class="contact-item"><i class="bi bi-envelope-fill"></i><span data-config-text="email"></span></div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <h5 data-i18n="footer.newsletter">Newsletter</h5>
+        <p data-i18n="footer.newsletterText">Subscribe to our newsletter to receive the latest news, events, and updates from Jain Faith.</p>
+        <div class="newsletter-form">
+          <input type="email" data-i18n-placeholder="footer.ph.email" placeholder="Enter your email address" />
+          <button type="submit"><i class="bi bi-send-fill"></i></button>
+        </div>
+      </div>
+    </div>
+    <div class="footer-disclaimer">
+      <p data-i18n="footer.disclaimer">यह वेबसाइट पूज्य जिनधर्म प्रभाविका आर्यिका रत्न 105 श्री सृष्टि भूषण माता जी के भक्तों द्वारा जिन धर्म की प्रभावना हेतु चलाई जा रही है। ध्यान रहे, पूज्य माता जी आर्यिका चर्या पालन करते हुए किसी भी प्रकार के परिग्रह को अपने पास नहीं रखती हैं।</p>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-logo">
+        <img src="assets/images/logo/logo.jpeg" alt="Logo" />
+      </div>
+      <p data-i18n="footer.copyright">&copy; 2026 Jain Faith. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/site-config.js"></script>
+<script src="assets/js/translations.js"></script>
+<script src="assets/js/biography.js"></script>
+<script src="assets/js/i18n.js"></script>
+<script>
+  /* Scroll animations */
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('animate-in'); observer.unobserve(e.target); }
+    });
+  }, { threshold: 0.15 });
+  document.querySelectorAll('.anim-fade-up, .anim-fade-left, .anim-fade-right')
+    .forEach(el => observer.observe(el));
+
+  /* Form submit demo */
+  document.getElementById('contactForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    document.getElementById('successMsg').style.display = 'block';
+    this.reset();
+    setTimeout(() => { document.getElementById('successMsg').style.display = 'none'; }, 5000);
+  });
+</script>
+</body>
+</html>

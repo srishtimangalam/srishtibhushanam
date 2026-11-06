@@ -1,0 +1,19 @@
+.navbar-nav .sanstha-menu {
+  width: min(28rem, calc(100vw - 2rem));
+}
+
+.navbar-nav .sanstha-menu .dropdown-item {
+  white-space: normal;
+  overflow-wrap: anywhere;
+  text-transform: none;
+  line-height: 1.6;
+}
+
+.navbar-nav .sanstha-menu .dropdown-item.active {
+  background: #fdf6ee;
+  color: var(--orange, #f7941d);
+}
+
+@media (max-width: 991px) {
+  .navbar-nav .sanstha-menu { width: 100%; }
+}

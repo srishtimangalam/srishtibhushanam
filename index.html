@@ -1,0 +1,1304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Srishti Bhushan Mataji</title>
+  <link rel="icon" type="image/jpeg" href="assets/images/logo/logo.jpeg" />
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Owl Carousel -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="assets/css/lang-switcher.css" rel="stylesheet" />
+  <link href="assets/css/sanstha-menu.css" rel="stylesheet" />
+  <link href="assets/css/loader.css" rel="stylesheet" />
+  <link rel="preload" as="image" href="assets/images/website_loader.jpeg" />
+  <script>document.documentElement.lang=localStorage.getItem('site-lang')||'en';document.documentElement.classList.add('page-loading');</script>
+
+  <style>
+    /* ─── Root Variables ─────────────────────────────────────── */
+    :root {
+      --orange:  #f7941d;
+      --dark:    #1e1e1e;
+      --gray-bg: #f5f5f5;
+      --text:    #555;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      font-family: 'Roboto', 'Noto Sans Devanagari', sans-serif;
+      font-optical-sizing: auto;
+      font-variation-settings: "wdth" 100;
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    a { text-decoration: none; }
+
+    h1,h2,h3,h4,h5 { color: var(--dark); }
+
+    .btn-orange {
+      background: var(--orange);
+      color: #fff;
+      border: none;
+      border-radius: 3px;
+      padding: 10px 28px;
+      font-weight: 600;
+      font-size: .875rem;
+      letter-spacing: .5px;
+      transition: background .25s;
+    }
+    .btn-orange:hover { background: #e0840f; color: #fff; }
+
+    .section-title {
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 40px;
+      position: relative;
+    }
+    .section-title::after {
+      content: '';
+      display: block;
+      width: 50px;
+      height: 3px;
+      background: var(--orange);
+      margin: 10px auto 0;
+    }
+
+    /* ─── Navbar ─────────────────────────────────────────────── */
+    .navbar {
+      background: #fff;
+      box-shadow: 0 2px 10px rgba(0,0,0,.08);
+      padding: 0;
+    }
+
+    .navbar-brand {
+      display: flex;
+      align-items: center;
+      padding: 10px 0;
+    }
+
+    .navbar-brand img {
+      width: 140px;
+      height: auto;
+      object-fit: contain;
+    }
+
+    .navbar-nav .nav-link {
+      font-size: .85rem;
+      font-weight: 700;
+      color: #1a2a4a;
+      padding: 28px 22px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      transition: color .2s;
+    }
+    .navbar-nav .nav-link:hover,
+    .navbar-nav .nav-link.active { color: var(--orange); }
+
+    /* dropdown caret — keep small */
+    .navbar-nav .dropdown-toggle::after {
+      vertical-align: middle;
+      margin-left: 4px;
+    }
+
+    /* search icon link */
+    .navbar-nav .nav-link.search-link { padding: 28px 10px; }
+
+    .dropdown-menu {
+      border: none;
+      border-top: 3px solid var(--orange);
+      border-radius: 0 0 4px 4px;
+      box-shadow: 0 8px 24px rgba(0,0,0,.1);
+      min-width: 180px;
+      padding: 8px 0;
+    }
+    .dropdown-item {
+      font-size: .78rem;
+      font-weight: 600;
+      letter-spacing: .8px;
+      text-transform: uppercase;
+      color: #1a2a4a;
+      padding: 9px 20px;
+      transition: color .2s, background .2s;
+    }
+    .dropdown-item:hover { color: var(--orange); background: #fdf6ee; }
+
+    /* ─── Hero Carousel ──────────────────────────────────────── */
+    .hero-slide {
+      min-height: 90vh;
+      background-size: cover;
+      /* background-position: center; */
+      background-repeat: no-repeat;
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,.55);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      color: #fff;
+      max-width: 620px;
+    }
+    .hero-content .tag {
+      font-size: .78rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.75);
+      margin-bottom: 12px;
+    }
+    .hero-content h1 {
+      font-size: clamp(2.2rem, 5vw, 3.6rem);
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.15;
+      margin-bottom: 20px;
+    }
+    .hero-content h1 span { color: var(--orange); }
+    .hero-content p {
+      font-size: .95rem;
+      color: rgba(255,255,255,.85);
+      margin-bottom: 32px;
+      line-height: 1.7;
+    }
+    /* Prev / Next arrow styling */
+    .carousel-control-prev,
+    .carousel-control-next {
+      width: 52px;
+      height: 52px;
+      background: rgba(255,255,255,.15);
+      border: 2px solid rgba(255,255,255,.5);
+      border-radius: 50%;
+      top: 50%;
+      transform: translateY(-50%);
+      opacity: 1;
+      transition: background .25s;
+    }
+    .carousel-control-prev { left: 20px; }
+    .carousel-control-next { right: 20px; }
+    .carousel-control-prev:hover,
+    .carousel-control-next:hover { background: var(--orange); border-color: var(--orange); }
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon { width: 18px; height: 18px; }
+    /* Indicators */
+    .carousel-indicators [data-bs-target] {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.5);
+      border: none;
+      margin: 0 5px;
+      transition: background .25s;
+    }
+    .carousel-indicators .active { background: var(--orange); }
+
+    /* ─── About ──────────────────────────────────────────────── */
+    .about-section { padding: 90px 0; }
+
+    .about-img-wrap {
+      position: relative;
+      display: inline-block;
+    }
+    .about-img-wrap img {
+      width: 100%;
+      max-width: 420px;
+      border-radius: 4px;
+      box-shadow: 6px 10px 30px rgba(0,0,0,.12);
+    }
+    .about-text h2 { font-size: 1.8rem; font-weight: 700; margin-bottom: 18px; }
+    .about-text p  { font-size: .9rem; line-height: 1.8; margin-bottom: 12px; }
+
+    /* ─── Features (icons) ───────────────────────────────────── */
+    .features-section {
+      background: var(--gray-bg);
+      padding: 60px 0;
+      border-top: 1px solid #e8e8e8;
+    }
+    .feature-card {
+      text-align: center;
+      padding: 20px;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity .6s ease, transform .6s ease;
+    }
+    .feature-card.animate-in {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    /* stagger each card via data attribute */
+    .feature-card[data-delay="0"]   { transition-delay: 0s; }
+    .feature-card[data-delay="1"]   { transition-delay: .2s; }
+    .feature-card[data-delay="2"]   { transition-delay: .4s; }
+
+    .feature-card .icon-wrap {
+      width: 72px;
+      height: 72px;
+      background: var(--orange);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 18px;
+      font-size: 1.7rem;
+      color: #fff;
+      transition: transform .3s ease, box-shadow .3s ease;
+    }
+    .feature-card.animate-in .icon-wrap {
+      animation: iconPop .5s ease .5s both;
+    }
+    @keyframes iconPop {
+      0%   { transform: scale(.6); }
+      70%  { transform: scale(1.15); }
+      100% { transform: scale(1); }
+    }
+    .feature-card h5 { font-size: 1rem; font-weight: 700; margin-bottom: 10px; }
+    .feature-card p  { font-size: .82rem; line-height: 1.7; }
+
+    /* ─── Features Owl Slider ────────────────────────────────── */
+    .features-owl { margin-bottom: 48px; }
+    .features-owl .owl-slide-img {
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 6px 24px rgba(0,0,0,.12);
+      aspect-ratio: 16 / 9;
+      background: #f5f5f5;
+    }
+    .features-owl .owl-slide-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+    .features-owl .owl-nav {
+      margin-top: 18px;
+      text-align: center;
+    }
+    .features-owl .owl-nav button.owl-prev,
+    .features-owl .owl-nav button.owl-next {
+      width: 44px;
+      height: 44px;
+      background: var(--orange) !important;
+      color: #fff !important;
+      border-radius: 50%;
+      font-size: 1.1rem;
+      margin: 0 8px;
+      transition: background .25s, transform .25s;
+    }
+    .features-owl .owl-nav button.owl-prev:hover,
+    .features-owl .owl-nav button.owl-next:hover {
+      background: #e0840f !important;
+      transform: scale(1.05);
+    }
+    .features-owl .owl-dots {
+      margin-top: 16px;
+    }
+    .features-owl .owl-dots .owl-dot span {
+      width: 10px;
+      height: 10px;
+      background: #ccc;
+      transition: background .25s;
+    }
+    .features-owl .owl-dots .owl-dot.active span,
+    .features-owl .owl-dots .owl-dot:hover span {
+      background: var(--orange);
+    }
+
+    /* ─── CTA Banner ─────────────────────────────────────────── */
+    .cta-banner {
+      background: url('https://picsum.photos/seed/banner1/1920/800') center/cover no-repeat;
+      position: relative;
+      padding: 90px 0;
+      text-align: center;
+      color: #fff;
+    }
+    .cta-banner::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(10,10,10,.68);
+    }
+    .cta-banner .inner { position: relative; z-index: 1; }
+    .cta-banner .sub  {
+      font-size: .78rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.7);
+      margin-bottom: 10px;
+    }
+    .cta-banner h2 {
+      font-size: clamp(1.6rem, 4vw, 2.4rem);
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 14px;
+    }
+    .cta-banner p {
+      font-size: .9rem;
+      color: rgba(255,255,255,.8);
+      margin-bottom: 28px;
+      max-width: 520px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* ─── Team ───────────────────────────────────────────────── */
+    .team-section {
+      background: var(--gray-bg);
+      padding: 90px 0;
+    }
+    .team-card {
+      background: #fff;
+      border-radius: 4px;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(0,0,0,.07);
+      transition: box-shadow .25s;
+      display: flex;
+      align-items: flex-start;
+      padding: 20px;
+      gap: 16px;
+    }
+    .team-card:hover { box-shadow: 0 6px 22px rgba(0,0,0,.12); }
+    .team-card img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+    .team-info h6 { font-size: .95rem; font-weight: 700; margin-bottom: 4px; color: var(--orange); }
+    .team-info .phone { font-size: .78rem; color: #999; margin-bottom: 8px; }
+    .team-info p  { font-size: .78rem; line-height: 1.6; margin: 0; }
+
+    /* ─── Gallery ────────────────────────────────────────────── */
+    .gallery-section { padding: 90px 0; }
+
+    .gallery-item {
+      overflow: hidden;
+      border-radius: 3px;
+      aspect-ratio: 4 / 3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f5f5f5;
+      transition: box-shadow .3s;
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+    .gallery-item:hover { box-shadow: 0 8px 24px rgba(0,0,0,.14); }
+
+    /* ─── Community Banner ───────────────────────────────────── */
+    .community-banner {
+      background: #1e1e1e;
+      padding: 28px 0;
+    }
+    .community-banner p {
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 500;
+      margin: 0;
+    }
+    .community-banner p span { color: var(--orange); font-weight: 700; }
+
+    /* ─── Testimonials ───────────────────────────────────────── */
+    .testimonials-section {
+      background: var(--gray-bg);
+      padding: 90px 0;
+    }
+    .testi-card {
+      background: #fff;
+      padding: 36px 30px 28px;
+      border-radius: 4px;
+      box-shadow: 0 2px 12px rgba(0,0,0,.06);
+      position: relative;
+    }
+    .testi-card .quote-icon {
+      font-size: 3rem;
+      color: #e8e8e8;
+      line-height: 1;
+      margin-bottom: 12px;
+    }
+    .testi-card p { font-size: .88rem; line-height: 1.8; margin-bottom: 20px; font-style: italic; }
+    .testi-card .stars { color: var(--orange); font-size: .9rem; margin-bottom: 14px; }
+    .testi-card .author { display: flex; align-items: center; gap: 12px; }
+    .testi-card .author img {
+      width: 46px; height: 46px;
+      border-radius: 50%; object-fit: cover;
+    }
+    .testi-card .author h6 { font-size: .88rem; font-weight: 700; margin: 0; }
+    .testi-card .author span { font-size: .75rem; color: #999; }
+
+    /* ─── Blog ───────────────────────────────────────────────── */
+    .blog-section { padding: 90px 0; }
+
+    /* ─── Home Contact ───────────────────────────────────────── */
+    .home-contact-section {
+      padding: 90px 0;
+      background: var(--gray-bg);
+    }
+    .home-contact-sub {
+      max-width: 620px;
+      margin: -8px auto 40px;
+      font-size: .9rem;
+      line-height: 1.8;
+      color: var(--text);
+      text-align: center;
+    }
+    .home-contact-form-wrap {
+      background: #fff;
+      border-radius: 10px;
+      padding: 32px 28px;
+      box-shadow: 0 2px 16px rgba(0,0,0,.07);
+      height: 100%;
+    }
+    .home-contact-form-wrap .form-label {
+      font-size: .78rem;
+      font-weight: 600;
+      letter-spacing: .5px;
+      text-transform: uppercase;
+      color: var(--navy);
+      margin-bottom: 6px;
+    }
+    .home-contact-form-wrap .form-control {
+      border: 1px solid #e0e0e0;
+      border-radius: 6px;
+      padding: 12px 16px;
+      font-size: .85rem;
+      font-family: 'Roboto', 'Noto Sans Devanagari', sans-serif;
+      color: var(--dark);
+      transition: border-color .2s, box-shadow .2s;
+    }
+    .home-contact-form-wrap .form-control:focus {
+      border-color: var(--orange);
+      box-shadow: 0 0 0 3px rgba(247,148,29,.15);
+      outline: none;
+    }
+    .home-contact-form-wrap .form-control::placeholder { color: #bbb; }
+    .home-contact-form-wrap .btn-submit {
+      background: var(--orange);
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      padding: 13px 36px;
+      font-size: .85rem;
+      font-weight: 700;
+      letter-spacing: .5px;
+      transition: background .2s;
+    }
+    .home-contact-form-wrap .btn-submit:hover { background: #e0840f; color: #fff; }
+    .home-contact-success {
+      display: none;
+      margin-top: 16px;
+      padding: 12px 16px;
+      background: #edf7ed;
+      border: 1px solid #c8e6c9;
+      border-radius: 6px;
+      font-size: .84rem;
+      color: #2e7d32;
+    }
+    .home-contact-map {
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 16px rgba(0,0,0,.07);
+      height: 100%;
+      min-height: 420px;
+      background: #e8e8e8;
+    }
+    .home-contact-map iframe {
+      width: 100%;
+      height: 100%;
+      min-height: 420px;
+      border: 0;
+      display: block;
+    }
+    @media (max-width: 991px) {
+      .home-contact-map { min-height: 320px; }
+      .home-contact-map iframe { min-height: 320px; }
+    }
+
+    .blog-featured img {
+      width: 100%;
+      border-radius: 4px;
+      /* aspect-ratio: 4/3; */
+      object-fit: cover;
+      margin-bottom: 16px;
+    }
+    .blog-featured .cat {
+      font-size: .72rem;
+      color: var(--orange);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 600;
+    }
+    .blog-featured h4 { font-size: 1.1rem; font-weight: 700; margin: 8px 0; }
+    .blog-featured p  { font-size: .82rem; line-height: 1.7; }
+
+    .blog-mini {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      padding: 14px 0;
+      border-bottom: 1px solid #ebebeb;
+    }
+    .blog-mini:last-child { border-bottom: none; }
+    .blog-mini .date-box {
+      background: var(--orange);
+      color: #fff;
+      text-align: center;
+      padding: 6px 12px;
+      border-radius: 3px;
+      flex-shrink: 0;
+      min-width: 46px;
+    }
+    .blog-mini .date-box .day  { font-size: 1.1rem; font-weight: 700; line-height: 1; }
+    .blog-mini .date-box .mon  { font-size: .65rem; text-transform: uppercase; }
+    .blog-mini .blog-text h6   { font-size: .85rem; font-weight: 700; margin-bottom: 4px; }
+    .blog-mini .blog-text span { font-size: .72rem; color: #999; }
+
+    /* ─── Footer ─────────────────────────────────────────────── */
+    .footer {
+      background: #1e1e1e;
+      color: rgba(255,255,255,.7);
+      padding: 64px 0 32px;
+    }
+    .footer h5 {
+      color: #fff;
+      font-size: .95rem;
+      font-weight: 700;
+      margin-bottom: 22px;
+      position: relative;
+      padding-bottom: 10px;
+    }
+    .footer h5::after {
+      content: '';
+      position: absolute;
+      left: 0; bottom: 0;
+      width: 32px; height: 2px;
+      background: var(--orange);
+    }
+    .footer p, .footer li { font-size: .82rem; line-height: 1.9; }
+    .footer ul { list-style: none; padding: 0; margin: 0; }
+    .footer ul li a {
+      color: rgba(255,255,255,.65);
+      font-size: .82rem;
+      transition: color .2s;
+    }
+    .footer ul li a:hover { color: var(--orange); }
+    .footer .contact-item { display: flex; gap: 10px; align-items: flex-start; margin-bottom: 10px; }
+    .footer .contact-item i { color: var(--orange); margin-top: 3px; flex-shrink: 0; }
+
+    .newsletter-form { display: flex; margin-top: 14px; }
+    .newsletter-form input {
+      flex: 1;
+      padding: 10px 14px;
+      border: none;
+      border-radius: 3px 0 0 3px;
+      font-size: .82rem;
+      outline: none;
+    }
+    .newsletter-form button {
+      background: var(--orange);
+      color: #fff;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 0 3px 3px 0;
+      cursor: pointer;
+      transition: background .2s;
+    }
+    .newsletter-form button:hover { background: #e0840f; }
+
+    .footer-disclaimer {
+      border-top: 1px solid rgba(255,255,255,.1);
+      margin-top: 40px;
+      padding-top: 20px;
+      text-align: center;
+    }
+    .footer-disclaimer p {
+      margin: 0 auto;
+      font-size: .82rem;
+      line-height: 1.8;
+      color: rgba(255,255,255,.75);
+      max-width: 900px;
+    }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,.1);
+      margin-top: 20px;
+      padding-top: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .footer-bottom p { margin: 0; font-size: .78rem; }
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #fff;
+      font-weight: 700;
+      font-size: 1rem;
+    }
+    .footer-logo img {
+      width: 100px;
+      height: auto;
+      object-fit: contain;
+      mix-blend-mode: lighten;
+    }
+
+    /* ─── Scroll Animations ──────────────────────────────────── */
+    .anim-fade-up {
+      opacity: 0;
+      transform: translateY(50px);
+      transition: opacity .65s ease, transform .65s ease;
+    }
+    .anim-fade-left {
+      opacity: 0;
+      transform: translateX(-50px);
+      transition: opacity .65s ease, transform .65s ease;
+    }
+    .anim-fade-right {
+      opacity: 0;
+      transform: translateX(50px);
+      transition: opacity .65s ease, transform .65s ease;
+    }
+    .anim-zoom {
+      opacity: 0;
+      transform: scale(.85);
+      transition: opacity .6s ease, transform .6s ease;
+    }
+    .anim-fade-up.animate-in,
+    .anim-fade-left.animate-in,
+    .anim-fade-right.animate-in,
+    .anim-zoom.animate-in {
+      opacity: 1;
+      transform: none;
+    }
+    [data-delay="1"] { transition-delay: .12s !important; }
+    [data-delay="2"] { transition-delay: .24s !important; }
+    [data-delay="3"] { transition-delay: .36s !important; }
+    [data-delay="4"] { transition-delay: .48s !important; }
+    [data-delay="5"] { transition-delay: .60s !important; }
+
+    /* ─── Responsive tweaks ──────────────────────────────────── */
+    @media (max-width: 768px) {
+      .hero { min-height: 70vh; }
+      .about-img-wrap img { max-width: 100%; margin-bottom: 30px; }
+    }
+  </style>
+</head>
+<body data-i18n-title="title.home">
+
+<div id="page-loader" class="page-loader">
+  <img src="assets/images/website_loader.png" alt="Loading" fetchpriority="high" decoding="async" />
+</div>
+<script src="assets/js/loader.js"></script>
+
+<!-- ═══════════════════════════════ NAVBAR ═══════════════════════════════ -->
+<nav class="navbar navbar-expand-lg sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <img src="assets/images/logo/logo.jpeg" alt="Jain Faith Logo" />
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+
+        <li class="nav-item">
+          <a class="nav-link active" href="index.html" data-i18n="nav.home">Home</a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" data-i18n="nav.explore">Explore</a>
+          <ul class="dropdown-menu">
+            <li hidden><a class="dropdown-item" href="#" data-i18n="nav.sangh">Sangh</a></li>
+            <li><a class="dropdown-item" href="chaturmas.html" data-i18n="nav.chaturmas">Chaturmas</a></li>
+            <li hidden><a class="dropdown-item" href="#" data-i18n="nav.granth">Granth</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="about.html" data-i18n="nav.biography">Biography</a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false" data-i18n="nav.sanstha">Sanstha</a>
+          <ul class="dropdown-menu sanstha-menu">
+            <li><a class="dropdown-item" href="sristhi-mangalam-foundation.html" data-i18n="svc.madhuban.title">Sristhi Mangalam Foundation, Shikhar Ji Madhuban</a></li>
+            <li><a class="dropdown-item" href="sristhi-mangalam-seva-samiti.html" data-i18n="svc.seva.title">Sristhi Mangalam Seva Samiti (Reg.)</a></li>
+            <li><a class="dropdown-item" href="adinath-sristhi-dharma-prabhavana-samiti.html" data-i18n="svc.adinath.title">Shri Adinath Sristhi Dharma Prabhavana Samiti, Sammed Shikhar Ji</a></li>
+            <li><a class="dropdown-item" href="sristhi-mangalam-samiti-mahavir-ji.html" data-i18n="svc.mahavir.title">Sristhi Mangalam Samiti, Shri Mahavir Ji</a></li>
+            <li><a class="dropdown-item" href="aadi-sristhi-cancer-trust.html" data-i18n="svc.cancer.title">Aadi Sristhi Cancer Trust</a></li>
+            <li><a class="dropdown-item" href="nijashray.html" data-i18n="svc.nijashray.title">Nijashray</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" data-i18n="nav.pravachan">Pravachan</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="pravachan.html?tab=video" data-i18n="nav.video">Video</a></li>
+            <li><a class="dropdown-item" href="pravachan.html?tab=shorts" data-i18n="nav.shorts">Shorts</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="events.html" data-i18n="nav.events">Events</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#contact" data-i18n="nav.contact">Contact Us</a>
+        </li>
+
+        <li class="nav-item lang-switcher">
+          <div class="lang-select-wrap">
+            <i class="bi bi-globe2" aria-hidden="true"></i>
+            <select id="langSelect" class="lang-select" aria-label="Select language">
+              <option value="en">English</option>
+              <option value="hi">हिंदी</option>
+            </select>
+          </div>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ════════════════════════════════ HERO ════════════════════════════════ -->
+<!-- ════════════════════════════════ HERO CAROUSEL ════════════════════════════════ -->
+<div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+
+  <!-- Slides -->
+  <div class="carousel-inner">
+
+    <!-- Slide 1 -->
+    <div class="carousel-item active">
+      <div class="hero-slide" style="background-image: url('assets/images/slide_img/slide1.jpg');">
+        <div class="hero-overlay"></div>
+        <div class="container h-100 d-flex align-items-center">
+          <div class="hero-content">
+            <!-- <p class="tag">Welcome to Jain Faith</p>
+            <h1>#1 Jainism <span>Website</span></h1>
+            <p>We're the best and most leading online resource for all Jainism information, helping you both in-depth and discover all knowledge about Jain dharma and sacred Jain rituals.</p>
+            <a href="#about" class="btn btn-orange">Learn More</a> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="carousel-item">
+      <div class="hero-slide" style="background-image: url('assets/images/slide_img/slide2.jpg');">
+        <div class="hero-overlay"></div>
+        <div class="container h-100 d-flex align-items-center">
+          <div class="hero-content">
+            <!-- <p class="tag">Explore Our Community</p>
+            <h1>Helping You <span>Achieve Harmony</span></h1>
+            <p>Join thousands of members from around the world who have found peace, knowledge and community through our Jain Faith platform and resources.</p>
+            <a href="sanstha.html#services" class="btn btn-orange">Our Services</a> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="carousel-item">
+      <div class="hero-slide" style="background-image: url('assets/images/slide_img/slide3.jpg');">
+        <div class="hero-overlay"></div>
+        <div class="container h-100 d-flex align-items-center">
+          <div class="hero-content">
+            <!-- <p class="tag">Grow Your Spiritual Journey</p>
+            <h1>Discover the <span>Path of Dharma</span></h1>
+            <p>Explore ancient wisdom, sacred traditions and timeless teachings that have guided generations of Jains towards a life of purpose, devotion and inner peace.</p>
+            <a href="#about" class="btn btn-orange">Join Now</a> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Prev / Next Controls -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+
+  <!-- Indicators -->
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+  </div>
+
+</div>
+
+<!-- ══════════════════════════════ ABOUT ══════════════════════════════════ -->
+<section class="about-section" id="about">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-5 text-center">
+        <div class="about-img-wrap">
+          <img
+            src="assets/images/slide_img/sristhi.jpeg"
+            alt="Sristhi"
+          />
+        </div>
+      </div>
+      <div class="col-lg-7 about-text">
+        <h2 data-i18n="about.heading">Biography</h2>
+        <p data-i18n="about.textShort">परम पूज्य आर्यिका रत्न 105 श्री सृष्टी भूषण माताजी का जन्म मध्य प्रदेश की पावन धरा पर बसने वाले मुंगावली में हुआ।</p>
+        <a href="about.html" class="btn btn-orange mt-2" data-i18n="btn.learnMore">Learn More</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════ FEATURES ═══════════════════════════════ -->
+<section class="features-section">
+  <div class="container">
+
+    <div class="owl-carousel owl-theme features-owl">
+      <div class="item">
+        <div class="owl-slide-img">
+          <img src="assets/images/owl slider/WhatsApp Image 2026-06-13 at 11.52.51 PM (1).jpeg" alt="Gallery image 1" />
+        </div>
+      </div>
+      <div class="item">
+        <div class="owl-slide-img">
+          <img src="assets/images/owl slider/WhatsApp Image 2026-06-13 at 11.52.51 PM (2).jpeg" alt="Gallery image 2" />
+        </div>
+      </div>
+      <div class="item">
+        <div class="owl-slide-img">
+          <img src="assets/images/owl slider/WhatsApp Image 2026-06-13 at 11.52.51 PM.jpeg" alt="Gallery image 3" />
+        </div>
+      </div>
+      <div class="item">
+        <div class="owl-slide-img">
+          <img src="assets/images/owl slider/WhatsApp Image 2026-06-13 at 11.52.52 PM (1).jpeg" alt="Gallery image 4" />
+        </div>
+      </div>
+      <div class="item">
+        <div class="owl-slide-img">
+          <img src="assets/images/owl slider/WhatsApp Image 2026-06-13 at 11.52.52 PM (2).jpeg" alt="Gallery image 5" />
+        </div>
+      </div>
+      <div class="item">
+        <div class="owl-slide-img">
+          <img src="assets/images/owl slider/WhatsApp Image 2026-06-13 at 11.52.52 PM.jpeg" alt="Gallery image 6" />
+        </div>
+      </div>
+      <div class="item">
+        <div class="owl-slide-img">
+          <img src="assets/images/owl slider/WhatsApp Image 2026-06-13 at 11.52.53 PM.jpeg" alt="Gallery image 7" />
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="row g-4">
+      <div class="col-md-4">
+        <div class="feature-card" data-delay="0">
+          <div class="icon-wrap"><i class="bi bi-book-half"></i></div>
+          <h5 data-i18n="feat.education">Education</h5>
+          <p data-i18n="feat.educationText">
+            Jain Faith's goal is to educate people about Jainism, giving a
+            higher understanding of Jain ways and traditions through authentic
+            resources and community events.
+          </p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="feature-card" data-delay="1">
+          <div class="icon-wrap"><i class="bi bi-shield-check"></i></div>
+          <h5 data-i18n="feat.policy">Policy</h5>
+          <p data-i18n="feat.policyText">
+            We are committed to all our readers and members to ensure that they
+            are safe and being provided with proper content through our strict
+            editorial policy for all articles.
+          </p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="feature-card" data-delay="2">
+          <div class="icon-wrap"><i class="bi bi-people-fill"></i></div>
+          <h5 data-i18n="feat.community">Community</h5>
+          <p data-i18n="feat.communityText">
+            Jain Faith is proud to hold a strong Jain community of individuals
+            and families across the globe who share a common commitment to
+            Jainism and its traditions.
+          </p>
+        </div>
+      </div>
+    </div> -->
+  </div>
+</section>
+
+<!-- ════════════════════════════ CTA BANNER ══════════════════════════════ -->
+<section class="cta-banner">
+  <div class="inner container anim-fade-up">
+    <p class="sub" data-i18n="cta.sub">The Only Way to Jain</p>
+    <h2 data-i18n="cta.heading">Helping You Achieve Harmony</h2>
+    <p data-i18n="cta.text">
+      Our website works to provide you with the very best information and resources to
+      help you on your journey to achieving harmony and inner peace through Jainism.
+    </p>
+    <a href="#" class="btn btn-orange" data-i18n="btn.joinNow">Join Now</a>
+  </div>
+</section>
+
+<!-- ══════════════════════════════ TEAM ═══════════════════════════════════ -->
+<section class="team-section" id="team">
+  <div class="container">
+    <h2 class="section-title text-center anim-fade-up" data-i18n="team.title">Our Team</h2>
+    <div class="row g-4">
+      <!-- Member 1 -->
+      <div class="col-md-6">
+        <div class="team-card anim-fade-left" data-delay="0">
+          <img src="https://picsum.photos/seed/team1/80/80" alt="Jake Mason" />
+          <div class="team-info">
+            <h6 data-i18n="team.m1.name">Sharaddha Jain</h6>
+            <p class="phone"><i class="bi bi-telephone-fill me-1" style="color:var(--orange)"></i><span data-i18n="team.m1.phone">+91 95846 51008</span></p>
+            <p data-i18n="team.m1.text">Sharaddha is our chief editor and head of community management. She brings years of experience in Jain philosophy and digital media management.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Member 2 -->
+      <div class="col-md-6">
+        <div class="team-card anim-fade-right" data-delay="1">
+          <img src="https://picsum.photos/seed/team2/80/80" alt="Gita Morrison" />
+          <div class="team-info">
+            <h6 data-i18n="team.m2.name">Pavitra Modi</h6>
+            <p class="phone"><i class="bi bi-telephone-fill me-1" style="color:var(--orange)"></i><span data-i18n="team.m2.phone">+91 95846 51008</span></p>
+            <p data-i18n="team.m2.text">Pavitra modi is our lead content creator and researcher, focusing on traditional practices and the spiritual aspects of Jain dharma and culture.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Member 3 -->
+      <div class="col-md-6">
+        <div class="team-card anim-fade-left" data-delay="2">
+          <img src="https://picsum.photos/seed/team3/80/80" alt="Jay Robinson" />
+          <div class="team-info">
+            <h6 data-i18n="team.m3.name">Sarvgya Jain</h6>
+            <p class="phone"><i class="bi bi-telephone-fill me-1" style="color:var(--orange)"></i><span data-i18n="team.m3.phone">+91 95846 51008</span></p>
+            <p data-i18n="team.m3.text">Sarvgya jain manages our events and community outreach, helping to organise gatherings and connect Jain communities across North America.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Member 4 -->
+      <div class="col-md-6">
+        <div class="team-card anim-fade-right" data-delay="3">
+          <img src="https://picsum.photos/seed/team4/80/80" alt="Diya Patel" />
+          <div class="team-info">
+            <h6 data-i18n="team.m4.name">Surbhi Jain</h6>
+            <p class="phone"><i class="bi bi-telephone-fill me-1" style="color:var(--orange)"></i><span data-i18n="team.m4.phone">+91 95846 51008</span></p>
+            <p data-i18n="team.m4.text">Surbhi jain is our social media manager and graphic designer, bringing creative energy to all our platforms and helping grow our online presence.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-5">
+      <a href="#" class="btn btn-orange" data-i18n="btn.viewAllTeam">View All Team</a>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════ GALLERY ══════════════════════════════════ -->
+<section class="gallery-section" id="gallery">
+  <div class="container">
+    <h2 class="section-title text-center anim-fade-up" data-i18n="gallery.title">Our Gallery</h2>
+    <div class="row g-3">
+      <div class="col-6 col-md-4"><div class="gallery-item anim-zoom" data-delay="0">
+        <img src="assets/images/owl slider/mataji-poster.png" alt="Shri Sristhi Bhushan Mataji" />
+      </div></div>
+      <div class="col-6 col-md-4"><div class="gallery-item anim-zoom" data-delay="1">
+        <img src="assets/images/owl slider/WhatsApp Image 2026-06-13 at 11.52.51 PM (1).jpeg" alt="Gallery image 1" />
+      </div></div>
+      <div class="col-6 col-md-4"><div class="gallery-item anim-zoom" data-delay="2">
+        <img src="assets/images/owl slider/WhatsApp Image 2026-06-13 at 11.52.51 PM (2).jpeg" alt="Gallery image 2" />
+      </div></div>
+      <div class="col-6 col-md-4"><div class="gallery-item anim-zoom" data-delay="3">
+        <img src="assets/images/owl slider/WhatsApp Image 2026-06-13 at 11.52.51 PM.jpeg" alt="Gallery image 3" />
+      </div></div>
+      <div class="col-6 col-md-4"><div class="gallery-item anim-zoom" data-delay="4">
+        <img src="assets/images/owl slider/WhatsApp Image 2026-06-13 at 11.52.52 PM (1).jpeg" alt="Gallery image 4" />
+      </div></div>
+      <div class="col-6 col-md-4"><div class="gallery-item anim-zoom" data-delay="5">
+        <img src="assets/images/owl slider/WhatsApp Image 2026-06-13 at 11.52.52 PM (2).jpeg" alt="Gallery image 5" />
+      </div></div>
+      <div class="col-6 col-md-4"><div class="gallery-item anim-zoom" data-delay="0">
+        <img src="assets/images/owl slider/WhatsApp Image 2026-06-13 at 11.52.52 PM.jpeg" alt="Gallery image 6" />
+      </div></div>
+      <div class="col-6 col-md-4"><div class="gallery-item anim-zoom" data-delay="1">
+        <img src="assets/images/owl slider/WhatsApp Image 2026-06-13 at 11.52.53 PM.jpeg" alt="Gallery image 7" />
+      </div></div>
+    </div>
+    <div class="text-center mt-5">
+      <a href="#" class="btn btn-orange" data-i18n="btn.viewMore">View More</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════ COMMUNITY BANNER ═══════════════════════════ -->
+<div class="community-banner">
+  <div class="container d-flex flex-wrap align-items-center justify-content-between gap-3">
+    <p class="anim-fade-left" data-i18n-html="comm.banner">Become a Part of <span>The Largest Jain Community</span> Today!</p>
+    <a href="#" class="btn btn-orange anim-fade-right" data-i18n="btn.getStarted">Get Started</a>
+  </div>
+</div>
+
+<!-- ════════════════════════════ TESTIMONIALS ════════════════════════════ -->
+<!-- <section class="testimonials-section hidden">
+  <div class="container">
+    <h2 class="section-title text-center anim-fade-up" data-i18n="testi.title">Testimonials</h2>
+    <div class="row g-4">
+      <div class="col-md-6">
+        <div class="testi-card anim-fade-left" data-delay="0">
+          <div class="quote-icon"><i class="bi bi-quote"></i></div>
+          <p data-i18n="testi.1.text">
+            I would like to thank you for creating such a wonderful website where one can find
+            everything about Jainism. In my mind, more people should know about this religion.
+            The resources here are truly excellent and help me stay connected to my heritage.
+          </p>
+          <div class="stars">
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+          </div>
+          <div class="author">
+            <img src="https://picsum.photos/seed/rev1/46/46" alt="Reviewer 1" />
+            <div>
+              <h6>Arjun Sharma</h6>
+              <span data-i18n="testi.1.role">Community Member</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="testi-card anim-fade-right" data-delay="1">
+          <div class="quote-icon"><i class="bi bi-quote"></i></div>
+          <p data-i18n="testi.2.text">
+            A friend referred me to this website when I was looking for some facts about Jainism
+            for my science project. Now, I am a regular visitor of the website. The content is
+            accurate, well-written and very insightful for both beginners and advanced learners.
+          </p>
+          <div class="stars">
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-half"></i>
+          </div>
+          <div class="author">
+            <img src="https://picsum.photos/seed/rev2/46/46" alt="Reviewer 2" />
+            <div>
+              <h6>Priya Nair</h6>
+              <span data-i18n="testi.2.role">Regular Visitor</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+<!-- ════════════════════════════ EVENTS ═══════════════════════════════ -->
+<section class="blog-section" id="events">
+  <div class="container">
+    <h2 class="section-title text-center anim-fade-up" data-i18n="blog.title">Latest Events</h2>
+    <div class="row g-4" id="homeEventsContainer"></div>
+    <div class="text-center mt-5">
+      <a href="events.html" class="btn btn-orange" data-i18n="btn.viewAllPosts">View All Events</a>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════ CONTACT US ══════════════════════════════ -->
+<section class="home-contact-section" id="contact">
+  <div class="container">
+    <h2 class="section-title text-center anim-fade-up" data-i18n="nav.contact">Contact Us</h2>
+    <p class="home-contact-sub anim-fade-up" data-i18n="contact.formSub">Have a question, suggestion or just want to say hello? Fill in the form below and we'll get back to you as soon as possible.</p>
+    <div class="row g-4 align-items-stretch">
+      <div class="col-lg-6 anim-fade-left">
+        <div class="home-contact-form-wrap">
+          <form id="homeContactForm" novalidate>
+            <div class="mb-3">
+              <label class="form-label" for="homeContactName" data-i18n="contact.name">Name</label>
+              <input type="text" class="form-control" id="homeContactName" data-i18n-placeholder="contact.ph.name" placeholder="Your name" required />
+            </div>
+            <div class="mb-3">
+              <label class="form-label" for="homeContactEmail" data-i18n="contact.emailLabel">Email Address</label>
+              <input type="email" class="form-control" id="homeContactEmail" data-i18n-placeholder="contact.ph.email" placeholder="you@example.com" required />
+            </div>
+            <div class="mb-4">
+              <label class="form-label" for="homeContactMessage" data-i18n="contact.message">Message</label>
+              <textarea class="form-control" id="homeContactMessage" rows="5" data-i18n-placeholder="contact.ph.message" placeholder="Write your message here…" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-submit">
+              <i class="bi bi-send-fill me-2"></i><span data-i18n="contact.btnSend">Send Message</span>
+            </button>
+            <div class="home-contact-success" id="homeContactSuccess">
+              <i class="bi bi-check-circle-fill me-2"></i>
+              <span data-i18n="contact.success">Thank you! Your message has been sent. We'll get back to you soon.</span>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="col-lg-6 anim-fade-right">
+        <div class="home-contact-map">
+          <iframe
+            data-config-src="mapEmbedUrl"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Location map"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════ FOOTER ════════════════════════════════ -->
+<footer class="footer">
+  <div class="container">
+    <div class="row g-5">
+      <!-- About -->
+      <div class="col-lg-3 col-md-6">
+        <h5 data-i18n="footer.aboutTitle">About Us</h5>
+        <p data-i18n="footer.aboutText">Param Pujya Aryika Ratna 105 Shri Sristhi Bhushan Mataji was born in Mungaoli, a sacred town in Madhya Pradesh. The entire town was blessed by the birth of this divine soul. She filled the home of her virtuous mother Smt. Padma and ideal householder father Shri Kapoorchand with divine radiance.</p>
+      </div>
+      <!-- Pages -->
+      <div class="col-lg-2 col-md-6">
+        <h5 data-i18n="footer.quickLinks">Quick Links</h5>
+        <ul>
+          <li><a href="index.html"><i class="bi bi-chevron-right me-1" style="font-size:.7rem"></i><span data-i18n="footer.link.home">Home</span></a></li>
+          <li><a href="about.html"><i class="bi bi-chevron-right me-1" style="font-size:.7rem"></i><span data-i18n="footer.link.about">About Us</span></a></li>
+          <li><a href="sanstha.html#services"><i class="bi bi-chevron-right me-1" style="font-size:.7rem"></i><span data-i18n="footer.link.services">Sanstha</span></a></li>
+          <li><a href="events.html"><i class="bi bi-chevron-right me-1" style="font-size:.7rem"></i><span data-i18n="footer.link.blog">Events</span></a></li>
+          <li><a href="#gallery"><i class="bi bi-chevron-right me-1" style="font-size:.7rem"></i><span data-i18n="footer.link.gallery">Gallery</span></a></li>
+          <li><a href="#team"><i class="bi bi-chevron-right me-1" style="font-size:.7rem"></i><span data-i18n="footer.link.team">Our Team</span></a></li>
+        </ul>
+      </div>
+      <!-- Contact -->
+      <div class="col-lg-3 col-md-6">
+        <h5 data-i18n="footer.contactInfo">Contact Information</h5>
+        <div class="contact-item">
+          <i class="bi bi-geo-alt-fill"></i>
+          <span data-i18n="site.address"></span>
+        </div>
+        <div class="contact-item">
+          <i class="bi bi-telephone-fill"></i>
+          <span data-config-text="phone"></span>
+        </div>
+        <div class="contact-item">
+          <i class="bi bi-envelope-fill"></i>
+          <span data-config-text="email"></span>
+        </div>
+      </div>
+      <!-- Newsletter -->
+      <div class="col-lg-4 col-md-6">
+        <h5 data-i18n="footer.newsletter">Newsletter</h5>
+        <p data-i18n="footer.newsletterText">Subscribe to our newsletter to receive the latest news, events, and updates from Jain Faith.</p>
+        <div class="newsletter-form">
+          <input type="email" data-i18n-placeholder="footer.ph.email" placeholder="Enter your email address" />
+          <button type="submit"><i class="bi bi-send-fill"></i></button>
+        </div>
+      </div>
+    </div>
+    <div class="footer-disclaimer">
+      <p data-i18n="footer.disclaimer">यह वेबसाइट पूज्य जिनधर्म प्रभाविका आर्यिका रत्न 105 श्री सृष्टि भूषण माता जी के भक्तों द्वारा जिन धर्म की प्रभावना हेतु चलाई जा रही है। ध्यान रहे, पूज्य माता जी आर्यिका चर्या पालन करते हुए किसी भी प्रकार के परिग्रह को अपने पास नहीं रखती हैं।</p>
+    </div>
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+      <div class="footer-logo">
+        <img src="assets/images/logo/logo.jpeg" alt="Logo" />
+      </div>
+      <p data-i18n="footer.copyright">&copy; 2026 Jain Faith. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/site-config.js"></script>
+<script src="assets/js/translations.js"></script>
+<script src="assets/js/events.js"></script>
+<script src="assets/js/biography.js"></script>
+<script src="assets/js/i18n.js"></script>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate-in');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+
+  const selectors = [
+    '.feature-card',
+    '.anim-fade-up',
+    '.anim-fade-left',
+    '.anim-fade-right',
+    '.anim-zoom'
+  ];
+
+  document.querySelectorAll(selectors.join(',')).forEach(el => observer.observe(el));
+
+  document.getElementById('homeContactForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    document.getElementById('homeContactSuccess').style.display = 'block';
+    this.reset();
+    setTimeout(function () {
+      document.getElementById('homeContactSuccess').style.display = 'none';
+    }, 5000);
+  });
+
+  $(function () {
+    $('.features-owl').owlCarousel({
+      loop: true,
+      margin: 24,
+      nav: true,
+      dots: true,
+      autoplay: true,
+      autoplayTimeout: 3500,
+      autoplayHoverPause: true,
+      smartSpeed: 600,
+      navText: [
+        '<span aria-hidden="true"><i class="bi bi-chevron-left"></i></span>',
+        '<span aria-hidden="true"><i class="bi bi-chevron-right"></i></span>'
+      ],
+      responsive: {
+        0:    { items: 1 },
+        576:  { items: 2 },
+        992:  { items: 3 }
+      }
+    });
+  });
+</script>
+</body>
+</html>
