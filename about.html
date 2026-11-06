@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Srishti Bhushan Mataji</title>
+  <link rel="icon" type="image/jpeg" href="assets/images/logo/logo.jpeg" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="assets/css/lang-switcher.css" rel="stylesheet" />
+  <link href="assets/css/sanstha-menu.css" rel="stylesheet" />
+  <script>document.documentElement.lang=localStorage.getItem('site-lang')||'en';</script>
+
+  <style>
+    :root {
+      --orange: #f7941d;
+      --dark:   #1e1e1e;
+      --navy:   #1a2a4a;
+      --gray-bg:#f5f5f5;
+      --text:   #555;
+    }
+
+    * { box-sizing: border-box; }
+    body { font-family: 'Roboto', 'Noto Sans Devanagari', sans-serif; font-optical-sizing: auto; font-variation-settings: "wdth" 100; color: var(--text); overflow-x: hidden; }
+    a    { text-decoration: none; }
+    h1,h2,h3,h4,h5 { color: var(--dark); }
+
+    .navbar {
+      background: #fff;
+      box-shadow: 0 2px 10px rgba(0,0,0,.08);
+      padding: 0;
+    }
+    .navbar-brand img { width: 140px; height: auto; object-fit: contain; }
+    .navbar-nav .nav-link {
+      font-size: .85rem; font-weight: 700; color: var(--navy);
+      padding: 28px 22px; letter-spacing: 1.5px;
+      text-transform: uppercase; transition: color .2s;
+    }
+    .navbar-nav .nav-link:hover,
+    .navbar-nav .nav-link.active { color: var(--orange); }
+    .navbar-nav .dropdown-toggle::after { vertical-align: middle; margin-left: 4px; }
+    .dropdown-menu {
+      border: none; border-top: 3px solid var(--orange);
+      border-radius: 0 0 4px 4px;
+      box-shadow: 0 8px 24px rgba(0,0,0,.1);
+      min-width: 180px; padding: 8px 0;
+    }
+    .dropdown-item {
+      font-size: .78rem; font-weight: 600;
+      letter-spacing: .8px; text-transform: uppercase;
+      color: var(--navy); padding: 9px 20px;
+      transition: color .2s, background .2s;
+    }
+    .dropdown-item:hover { color: var(--orange); background: #fdf6ee; }
+
+    .page-hero {
+      background: linear-gradient(135deg, var(--navy) 0%, #2c3e6e 100%);
+      padding: 70px 0 55px;
+      text-align: center;
+    }
+    .page-hero h1 { color: #fff; font-size: 2.4rem; font-weight: 800; margin-bottom: 8px; }
+    .page-hero p  { color: rgba(255,255,255,.65); font-size: .9rem; margin: 0; }
+    .breadcrumb   { background: transparent; justify-content: center; margin-bottom: 12px; }
+    .breadcrumb-item a { color: var(--orange); }
+    .breadcrumb-item.active { color: rgba(255,255,255,.55); }
+    .breadcrumb-item + .breadcrumb-item::before { color: rgba(255,255,255,.35); }
+
+    .about-section { padding: 90px 0; background: #fff; }
+    .about-img-wrap {
+      display: inline-block;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 8px 32px rgba(0,0,0,.12);
+    }
+    .about-img-wrap img {
+      width: 100%;
+      max-width: 420px;
+      display: block;
+      object-fit: cover;
+    }
+    .bio-details {
+      margin-top: 24px;
+      text-align: left;
+      max-width: 420px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .bio-details h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 14px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--orange);
+      text-align: center;
+    }
+    .bio-details dl { margin: 0; }
+    .bio-detail-row {
+      display: flex;
+      gap: 12px;
+      padding: 9px 0;
+      border-bottom: 1px solid #eee;
+      font-size: .84rem;
+      line-height: 1.5;
+    }
+    .bio-detail-row:last-child { border-bottom: none; }
+    .bio-detail-row dt {
+      flex: 0 0 108px;
+      font-weight: 600;
+      color: var(--dark);
+      margin: 0;
+    }
+    .bio-detail-row dd {
+      margin: 0;
+      color: var(--text);
+    }
+    .about-text h2 { font-size: 1.8rem; font-weight: 700; margin-bottom: 18px; }
+    .about-text p  { font-size: .9rem; line-height: 1.9; margin-bottom: 16px; }
+    .bio-subheading {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--dark);
+      margin: 28px 0 14px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--orange);
+    }
+    .biography-content p:last-child { margin-bottom: 0; }
+
+    .footer {
+      background: #1e1e1e;
+      color: rgba(255,255,255,.7);
+      padding: 64px 0 32px;
+    }
+    .footer h5 {
+      color: #fff; font-size: .95rem; font-weight: 700;
+      margin-bottom: 22px; position: relative; padding-bottom: 10px;
+    }
+    .footer h5::after {
+      content: ''; position: absolute; left: 0; bottom: 0;
+      width: 32px; height: 2px; background: var(--orange);
+    }
+    .footer p, .footer li { font-size: .82rem; line-height: 1.9; }
+    .footer ul { list-style: none; padding: 0; margin: 0; }
+    .footer ul li a { color: rgba(255,255,255,.65); font-size: .82rem; transition: color .2s; }
+    .footer ul li a:hover { color: var(--orange); }
+    .footer .contact-item { display: flex; gap: 10px; align-items: flex-start; margin-bottom: 10px; }
+    .footer .contact-item i { color: var(--orange); margin-top: 3px; flex-shrink: 0; }
+    .newsletter-form { display: flex; margin-top: 14px; }
+    .newsletter-form input {
+      flex: 1; padding: 10px 14px; border: none;
+      border-radius: 3px 0 0 3px; font-size: .82rem; outline: none;
+    }
+    .newsletter-form button {
+      background: var(--orange); color: #fff; border: none;
+      padding: 10px 16px; border-radius: 0 3px 3px 0;
+      cursor: pointer; transition: background .2s;
+    }
+    .newsletter-form button:hover { background: #e0840f; }
+    .footer-disclaimer {
+      border-top: 1px solid rgba(255,255,255,.1);
+      margin-top: 40px; padding-top: 20px;
+      text-align: center;
+    }
+    .footer-disclaimer p {
+      margin: 0 auto;
+      font-size: .82rem; line-height: 1.8;
+      color: rgba(255,255,255,.75);
+      max-width: 900px;
+    }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,.1);
+      margin-top: 20px; padding-top: 20px;
+      display: flex; align-items: center;
+      justify-content: space-between; flex-wrap: wrap; gap: 12px;
+    }
+    .footer-bottom p { margin: 0; font-size: .78rem; }
+    .footer-logo { display: flex; align-items: center; gap: 8px; color: #fff; font-weight: 700; }
+    .footer-logo img { width: 100px; height: auto; object-fit: contain; mix-blend-mode: lighten; }
+
+    .anim-fade-up {
+      opacity: 0; transform: translateY(40px);
+      transition: opacity .6s ease, transform .6s ease;
+    }
+    .anim-fade-left {
+      opacity: 0; transform: translateX(-45px);
+      transition: opacity .65s ease, transform .65s ease;
+    }
+    .anim-fade-up.animate-in,
+    .anim-fade-left.animate-in { opacity: 1; transform: none; }
+
+    @media (max-width: 991px) {
+      .about-img-wrap img { max-width: 100%; margin-bottom: 30px; }
+    }
+  </style>
+</head>
+<body data-i18n-title="title.about">
+
+
+<!-- ══════════════════════ NAVBAR ══════════════════════ -->
+<nav class="navbar navbar-expand-lg sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <img src="assets/images/logo/logo.jpeg" alt="Logo" />
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="index.html" data-i18n="nav.home">Home</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" data-i18n="nav.explore">Explore</a>
+          <ul class="dropdown-menu">
+            <li hidden><a class="dropdown-item" href="#" data-i18n="nav.sangh">Sangh</a></li>
+            <li><a class="dropdown-item" href="chaturmas.html" data-i18n="nav.chaturmas">Chaturmas</a></li>
+            <li hidden><a class="dropdown-item" href="#" data-i18n="nav.granth">Granth</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link active" href="about.html" data-i18n="nav.biography">Biography</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false" data-i18n="nav.sanstha">Sanstha</a>
+          <ul class="dropdown-menu sanstha-menu">
+            <li><a class="dropdown-item" href="sristhi-mangalam-foundation.html" data-i18n="svc.madhuban.title">Sristhi Mangalam Foundation, Shikhar Ji Madhuban</a></li>
+            <li><a class="dropdown-item" href="sristhi-mangalam-seva-samiti.html" data-i18n="svc.seva.title">Sristhi Mangalam Seva Samiti (Reg.)</a></li>
+            <li><a class="dropdown-item" href="adinath-sristhi-dharma-prabhavana-samiti.html" data-i18n="svc.adinath.title">Shri Adinath Sristhi Dharma Prabhavana Samiti, Sammed Shikhar Ji</a></li>
+            <li><a class="dropdown-item" href="sristhi-mangalam-samiti-mahavir-ji.html" data-i18n="svc.mahavir.title">Sristhi Mangalam Samiti, Shri Mahavir Ji</a></li>
+            <li><a class="dropdown-item" href="aadi-sristhi-cancer-trust.html" data-i18n="svc.cancer.title">Aadi Sristhi Cancer Trust</a></li>
+            <li><a class="dropdown-item" href="nijashray.html" data-i18n="svc.nijashray.title">Nijashray</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" data-i18n="nav.pravachan">Pravachan</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="pravachan.html?tab=video" data-i18n="nav.video">Video</a></li>
+            <li><a class="dropdown-item" href="pravachan.html?tab=shorts" data-i18n="nav.shorts">Shorts</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="events.html" data-i18n="nav.events">Events</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html" data-i18n="nav.contact">Contact Us</a></li>
+        <li class="nav-item lang-switcher">
+          <div class="lang-select-wrap">
+            <i class="bi bi-globe2" aria-hidden="true"></i>
+            <select id="langSelect" class="lang-select" aria-label="Select language">
+              <option value="en">English</option>
+              <option value="hi">हिंदी</option>
+            </select>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ══════════════════════ PAGE HERO ══════════════════════ -->
+<section class="page-hero">
+  <div class="container">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html" data-i18n="nav.home">Home</a></li>
+        <li class="breadcrumb-item active" data-i18n="breadcrumb.biography">Biography</li>
+      </ol>
+    </nav>
+    <h1 data-i18n="about.heading">Biography</h1>
+    <p data-i18n="about.heroSub">A few words about Param Pujya Aryika Ratna Shri Sristhi Bhushan Mataji</p>
+  </div>
+</section>
+
+<!-- ══════════════════════ ABOUT CONTENT ══════════════════════ -->
+<section class="about-section">
+  <div class="container">
+    <div class="row align-items-start g-5">
+      <div class="col-lg-4 text-center anim-fade-left">
+        <div class="about-img-wrap">
+          <img
+            src="assets/images/slide_img/sristhi.jpeg"
+            alt="Sristhi"
+          />
+        </div>
+        <div class="bio-details">
+          <!-- <h3 data-i18n="about.bioDetails.title">जीवनी</h3> -->
+          <dl>
+            <div class="bio-detail-row">
+              <dt data-i18n="about.bioDetails.birthNameLabel">जन्म नाम</dt>
+              <dd data-i18n="about.bioDetails.birthName">Sulochna Jain</dd>
+            </div>
+            <div class="bio-detail-row">
+              <dt data-i18n="about.bioDetails.motherLabel">माता</dt>
+              <dd data-i18n="about.bioDetails.mother">Shrimati Padma Ji Jain</dd>
+            </div>
+            <div class="bio-detail-row">
+              <dt data-i18n="about.bioDetails.fatherLabel">पिता</dt>
+              <dd data-i18n="about.bioDetails.father">Shri Kapurchand Ji Jain</dd>
+            </div>
+            <div class="bio-detail-row">
+              <dt data-i18n="about.bioDetails.birthPlaceLabel">जन्म ग्राम</dt>
+              <dd data-i18n="about.bioDetails.birthPlace">Mungaoli, Dist-Ashoknagar, Madhya Pradesh</dd>
+            </div>
+            <div class="bio-detail-row">
+              <dt data-i18n="about.bioDetails.birthDateLabel">जन्म दिनांक</dt>
+              <dd data-i18n="about.bioDetails.birthDate">23-Mar-1964</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+      <div class="col-lg-8 about-text anim-fade-up">
+        <h2 data-i18n="about.heading">Biography</h2>
+        <div class="biography-content">
+          <p data-i18n="about.textShort">परम पूज्य आर्यिका रत्न 105 श्री सृष्टी भूषण माताजी का जन्म मध्य प्रदेश की पावन धरा पर बसने वाले मुंगावली में हुआ।</p>
+          <h3 class="bio-subheading" data-i18n="about.part2Title">वैराग का कारण</h3>
+          <p data-i18n="about.part2">जब सुलोचना 4 वर्ष की थी तो ताई जी सुपार्श्व मति माताजी के दर्शनों के लिए उन्हें उनके पास लेकर गई...</p>
+          <p data-i18n="about.part3">दीक्षा के उपरांत उन्होंने जगह-जगह, अनेक प्रांतों, नगरों में महती धर्म प्रभावना की और कर रही हैं।</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════ FOOTER ══════════════════════ -->
+<footer class="footer">
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-lg-3 col-md-6">
+        <h5 data-i18n="footer.aboutTitle">About Us</h5>
+        <p data-i18n="footer.aboutText">Param Pujya Aryika Ratna 105 Shri Sristhi Bhushan Mataji was born in Mungaoli, a sacred town in Madhya Pradesh. The entire town was blessed by the birth of this divine soul. She filled the home of her virtuous mother Smt. Padma and ideal householder father Shri Kapoorchand with divine radiance.</p>
+      </div>
+      <div class="col-lg-2 col-md-6">
+        <h5 data-i18n="footer.quickLinks">Quick Links</h5>
+        <ul>
+          <li><a href="index.html"><i class="bi bi-chevron-right me-1" style="font-size:.7rem"></i><span data-i18n="footer.link.home">Home</span></a></li>
+          <li><a href="about.html"><i class="bi bi-chevron-right me-1" style="font-size:.7rem"></i><span data-i18n="footer.link.about">About Us</span></a></li>
+          <li><a href="sanstha.html#services"><i class="bi bi-chevron-right me-1" style="font-size:.7rem"></i><span data-i18n="footer.link.services">Services</span></a></li>
+          <li><a href="events.html"><i class="bi bi-chevron-right me-1" style="font-size:.7rem"></i><span data-i18n="footer.link.blog">Events</span></a></li>
+          <li><a href="index.html#gallery"><i class="bi bi-chevron-right me-1" style="font-size:.7rem"></i><span data-i18n="footer.link.gallery">Gallery</span></a></li>
+          <li><a href="index.html#team"><i class="bi bi-chevron-right me-1" style="font-size:.7rem"></i><span data-i18n="footer.link.team">Our Team</span></a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <h5 data-i18n="footer.contactInfo">Contact Information</h5>
+        <div class="contact-item"><i class="bi bi-geo-alt-fill"></i><span data-i18n="site.address"></span></div>
+        <div class="contact-item"><i class="bi bi-telephone-fill"></i><span data-config-text="phone"></span></div>
+        <div class="contact-item"><i class="bi bi-envelope-fill"></i><span data-config-text="email"></span></div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <h5 data-i18n="footer.newsletter">Newsletter</h5>
+        <p data-i18n="footer.newsletterText">Subscribe to our newsletter to receive the latest news, events, and updates from Jain Faith.</p>
+        <div class="newsletter-form">
+          <input type="email" data-i18n-placeholder="footer.ph.email" placeholder="Enter your email address" />
+          <button type="submit"><i class="bi bi-send-fill"></i></button>
+        </div>
+      </div>
+    </div>
+    <div class="footer-disclaimer">
+      <p data-i18n="footer.disclaimer">यह वेबसाइट पूज्य जिनधर्म प्रभाविका आर्यिका रत्न 105 श्री सृष्टि भूषण माता जी के भक्तों द्वारा जिन धर्म की प्रभावना हेतु चलाई जा रही है। ध्यान रहे, पूज्य माता जी आर्यिका चर्या पालन करते हुए किसी भी प्रकार के परिग्रह को अपने पास नहीं रखती हैं।</p>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-logo">
+        <img src="assets/images/logo/logo.jpeg" alt="Logo" />
+      </div>
+      <p data-i18n="footer.copyright">&copy; 2026 Jain Faith. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/site-config.js"></script>
+<script src="assets/js/translations.js"></script>
+<script src="assets/js/biography.js"></script>
+<script src="assets/js/i18n.js"></script>
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate-in');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+
+  document.querySelectorAll('.anim-fade-up, .anim-fade-left').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
