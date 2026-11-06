@@ -10,8 +10,8 @@ const SITE_CONFIG = {
   mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3314.3925644493193!2d73.05866!3d19.305673!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7bd1425d8ba03%3A0x35c38a28b7ebed1!2sShree%201008%20Shantinath%20Digambar%20Jain%20Mandir%2C%20Bhiwandi!5e1!3m2!1sen!2sin!4v1793904222017!5m2!1sen!2sin',
   phone: '+91 95846 51008',
   whatsapp: '+91 95846 51008',
-  email: 'info@jainfaith.com',
-  supportEmail: 'support@jainfaith.com',
+  email: 'srishtibhushanmataji105@gmail.com',
+  supportEmail: 'srishtibhushanmataji105@gmail.com',
   youtube: 'https://www.youtube.com/@Srishti_mangalam',
   instagram: 'https://www.instagram.com/aadi_srashti_prabhavna/'
 };
