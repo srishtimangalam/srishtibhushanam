@@ -6,7 +6,7 @@
 const EVENTS = [
   {
     featured: true,
-    image: 'assets/images/slide_img/slide2.jpg',
+    image: 'assets/images/slide_img/slide2.png',
     alt: 'Guru Bhakti - Shri Sristhi Bhushan Mataji',
     date: { en: '29 Oct 2025', hi: '29 अक्टूबर 2025' },
     category: { en: 'By Patricia Robinson | News', hi: 'पैट्रिशिया रॉबिन्सन द्वारा | समाचार' },
